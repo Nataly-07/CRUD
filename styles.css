@@ -1,0 +1,116 @@
+/* Fuente importada de Google Fonts */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Se reinician los espacios que se agregan por defecto, quedan en 0 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Todo texto tendrá la fuente Montserrat, botones, entradas de texto, body, etc. */
+body, button, input {
+    font-family: "PT Serif", serif;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('imagenes/h3.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    /* opacity: 0.7;  */
+    z-index: -1; 
+}
+
+/* La clase container estará centrada, que es el contenedor "padre" de todo el formulario */
+.container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    
+}
+
+.crud_title {
+    text-align: center;
+    color: rgb(35, 94, 143);
+}
+
+.logo img {
+    width: 55px; 
+    height: auto; 
+    
+
+}
+
+.crud_form {
+    display: flex;
+    margin: 10px 0;
+}
+
+/* Tamaño de fuente de las entradas a 1rem unidad relativa, equivale al tamaño por defecto del navegador, 2rem = 18px * 2 */
+.form_input {
+    flex: 1;
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 1rem;
+    
+}
+
+/* Estilos al botón "padre" o en general */
+.button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+/* Efecto al pasar el mouse sobre el botón, crece 1.2 */
+.button:hover {
+    transform: scale(1.2);
+}
+
+/* Estilos específicos a "botón "primary" pero conserva propiedades del botón general "padre" */
+.button--primary {
+    background-color: rgba(44, 209, 214, 0.904);
+}
+
+/* Estilos específicos a "botón "secundary" que se crean automáticamente en la celda "acciones" */
+.button--secundary {
+    background-color: #07cdff;
+}
+
+/* Estilos específicos a "botón "terciary" que se crean automáticamente en la celda "acciones" */
+.button--terciary {
+    background-color: #c45762;
+    color: black;
+}
+
+/* Estilos a la tabla del Crud */
+.crudtable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table_header, .table_body td {
+    border: 1px solid #8bbbe9;
+    padding: 5px;
+    background-color: #a0deee;
+}
+
+.table_header {
+    background-color: #c6e2eb;
+}
+
+/* Estilos para el tercer elemento de la tablebody lo que serán los botones de la celda "acciones" */
+.table_body td:nth-child(3) {
+    display: flex;
+    justify-content: space-around;
+}
